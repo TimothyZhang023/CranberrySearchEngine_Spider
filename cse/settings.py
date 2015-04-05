@@ -9,6 +9,7 @@ BOT_NAME = 'cse'
 SPIDER_MODULES = ['cse.spiders']
 NEWSPIDER_MODULE = 'cse.spiders'
 
+DOWNLOAD_TIMEOUT = 120
 DOWNLOAD_DELAY = 0
 CONCURRENT_ITEMS = 100
 CONCURRENT_REQUESTS = 500
@@ -64,7 +65,7 @@ ALLOWED_DOMAIN = [
     '127.0.0.1',
 ]
 
-LOG_FILE = "logs/scrapy.log"
+LOG_FILE = "scrapy.log"
 LOG_LEVEL = "INFO"
 LOG_STDOUT = False
 
@@ -89,7 +90,6 @@ REDIS_PORT_Notify = 6379
 
 #Index Notify Queue Key
 IndexNotifyQueue = "IndexNotifyQueue"
-
 
 PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 HTML_DIR = os.path.join(PROJECT_DIR, '../html')

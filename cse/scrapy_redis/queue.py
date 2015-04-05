@@ -122,8 +122,8 @@ class RedisKV(object):
 
     @classmethod
     def from_settings(cls, settings):
-        server = settings.get('REDIS_HOST_Notify', REDIS_HOST)
-        port = settings.get('REDIS_PORT_Notify', REDIS_PORT)
+        server = settings.get('REDIS_HOST', REDIS_HOST)
+        port = settings.get('REDIS_PORT', REDIS_PORT)
 
         return cls(server, port)
 
@@ -143,14 +143,15 @@ class RedisKV(object):
 
 
 class IndexNotifyQueue(object):
+
     def __init__(self, server, port, key):
         self.server = redis.Redis(server, port)
         self.key = key
 
     @classmethod
     def from_settings(cls, settings):
-        server = settings.get('REDIS_HOST_Notify', REDIS_HOST)
-        port = settings.get('REDIS_PORT_Notify', REDIS_PORT)
+        server = settings.get('REDIS_HOST_Notify', REDIS_HOST_Notify)
+        port = settings.get('REDIS_PORT_Notify', REDIS_PORT_Notify)
         key = settings.get('IndexNotifyQueue', 'IndexNotifyQueue')
         return cls(server, port, key)
 

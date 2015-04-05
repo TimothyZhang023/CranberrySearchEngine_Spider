@@ -2,7 +2,13 @@
 #-*-coding:utf-8-*-
 
 from scrapy import log
+import scrapy
 from cse.scrapy_redis.queue import IndexNotifyQueue
+
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_HOST_Notify = 'localhost'
+REDIS_PORT_Notify = 6379
 
 
 class TestPipeline(object):
@@ -16,14 +22,26 @@ class TestPipeline(object):
             #log.msg(level=log.DEBUG, spider=spider, **logkws)
     """
 
-    def __init__(self):
+    def __init__(self, server, port, key):
+        self.server = server
+        self.port = port
+        self.key = key
+
         pass
+
+
+    @classmethod
+    def from_settings(cls, settings):
+        server = settings.get('REDIS_HOST_Notify', REDIS_HOST)
+        port = settings.get('REDIS_PORT_Notify', REDIS_PORT)
+        key = settings.get('IndexNotifyQueue', 'IndexNotifyQueue')
+        return cls(server, port, key)
 
     @classmethod
     def from_crawler(cls, crawler):
-        pipe = cls()
-        pipe.crawler = crawler
-        return pipe
+        settings = crawler.settings
+        return cls.from_settings(settings)
+
 
     def process_item(self, item, spider):
         #print self.style.NOTICE("SUCCESS(item):" + item['original_url'])
@@ -41,7 +59,8 @@ class TestPipeline(object):
             'storage_type': 'local_fs',
             'queue_time': item['fetch_time']
         }
-        index_notify_queue = IndexNotifyQueue()
+
+        index_notify_queue = IndexNotifyQueue(self.server, self.port, self.key)
         index_notify_queue.push(index_notify)
 
         return item

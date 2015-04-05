@@ -65,7 +65,7 @@ def clean_link(link_text):
 
 clean_url = lambda base_url, u, response_encoding: urljoin(base_url,
                                                            replace_entities(
-                                                               text=clean_link(u.decode(response_encoding)),
+                                                               text=clean_link(u.decode()),
                                                                encoding=response_encoding)
 )
 
