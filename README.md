@@ -1,6 +1,6 @@
 Cranberry Search Engine Spider
 ================================
-
+[![Build Status](https://magnum.travis-ci.com/zts1993/CranberrySearchEngine_Spider.svg?token=BUhpyUqs3x5XU96NN9my&branch=master)](https://magnum.travis-ci.com/zts1993/CranberrySearchEngine_Spider)
 
 # ReadMe
   I haven't thought about what to say
