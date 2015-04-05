@@ -3,6 +3,7 @@
 
 from scrapy import log
 import scrapy
+import time
 from cse.scrapy_redis.queue import IndexNotifyQueue
 
 REDIS_HOST = 'localhost'
@@ -57,7 +58,7 @@ class TestPipeline(object):
             'title': item['title'],
             'page_encoding': item['encoding'],
             'storage_type': 'local_fs',
-            'queue_time': item['fetch_time']
+            'queue_time': time.strftime("%Y-%m-%d %H:%M:%S")
         }
 
         index_notify_queue = IndexNotifyQueue(self.server, self.port, self.key)

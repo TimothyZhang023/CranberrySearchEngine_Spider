@@ -14,8 +14,8 @@ class WoaiduCrawlerItem(Item):
     book_covor_image_url = Field()
     book_download = Field()
     book_file_url = Field()
-    book_file = Field()#only use for save tho single mongodb
-    book_file_id = Field()#only use for save to shard mongodb
+    book_file = Field()  #only use for save tho single mongodb
+    book_file_id = Field()  #only use for save to shard mongodb
     original_url = Field()
 
 

@@ -143,7 +143,6 @@ class RedisKV(object):
 
 
 class IndexNotifyQueue(object):
-
     def __init__(self, server, port, key):
         self.server = redis.Redis(server, port)
         self.key = key

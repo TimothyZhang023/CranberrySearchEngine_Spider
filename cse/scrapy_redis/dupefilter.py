@@ -42,9 +42,9 @@ class RFPDupeFilter(BaseDupeFilter):
         """
             use sismember judge whether fp is duplicate.
         """
-        
+
         fp = request_fingerprint(request)
-        if self.server.sismember(self.key,fp):
+        if self.server.sismember(self.key, fp):
             return True
         self.server.sadd(self.key, fp)
         return False
