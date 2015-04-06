@@ -2,15 +2,12 @@
 #-*-coding:utf-8-*-
 import hashlib
 
-import time
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.spider import BaseSpider
 from scrapy.selector import HtmlXPathSelector
 from scrapy.http import Request
 from cse.items import CseCrawlerItem
 from cse.utils.select_result import clean_url
-from tld import get_tld
-from cse.scrapy_redis.queue import IndexNotifyQueue, RedisKV
 
 
 class CseSpider(BaseSpider):
@@ -31,13 +28,8 @@ class CseSpider(BaseSpider):
     # '\.pdf', '\.zip', '\.rar', '\.doc', '\.docx', '\.ppt', '\.pptx', '\.xls', '\.xlsx')), callback='parse',
     #               follow=True, ), )
 
-
     def parse(self, response):
-        # if not self.pass_item(response.url):
-        #     return
-
-        print ("now processing:" + response.url)
-        #self.save_html(response)
+        print ("now processing:" + response.url + " encode:" + response.encoding )
 
         response_selector = HtmlXPathSelector(text=response.body)
 
@@ -49,18 +41,12 @@ class CseSpider(BaseSpider):
         else:
             title = ''
 
-        if all_url_list:
-            #print all_url_list
-            pass
-        else:
-            self.log(" no url found in" + response.url)
-
         for next_link in all_url_list:
             next_link = clean_url(response.url, next_link, response.encoding)
             yield Request(url=next_link, callback=self.parse)
 
         cse_item = CseCrawlerItem()
-        cse_item['redis_id'] = hashlib.sha256(response.url).hexdigest()
+        cse_item['url_id'] = hashlib.sha256(response.url).hexdigest()
         cse_item['url'] = response.url
         cse_item['content_type'] = response.headers.get('Content-Type', '')
         cse_item['title'] = title

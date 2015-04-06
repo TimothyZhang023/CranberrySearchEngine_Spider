@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d543114-9a0a-43ca-ab62-f0725a7d41bd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+    <list default="true" id="0d543114-9a0a-43ca-ab62-f0725a7d41bd" name="Default" comment="improve code style">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cse/pipelines/notify.py" />
+      <change type="MOVED" beforePath="C:\Users\TianShuo\PycharmProjects\CSE-Spider\cse\pipelines\test.py" afterPath="$PROJECT_DIR$/cse/pipelines/save_html.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cse/spiders/cse_spider.py" afterPath="$PROJECT_DIR$/cse/spiders/cse_spider.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cse/scrapy_redis/dupefilter.py" afterPath="$PROJECT_DIR$/cse/scrapy_redis/dupefilter.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cse/items.py" afterPath="$PROJECT_DIR$/cse/items.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cse/scrapy_redis/queue.py" afterPath="$PROJECT_DIR$/cse/scrapy_redis/queue.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cse/contrib/downloadmiddleware/rotate_useragent.py" afterPath="$PROJECT_DIR$/cse/contrib/downloadmiddleware/rotate_useragent.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cse/utils/select_result.py" afterPath="$PROJECT_DIR$/cse/utils/select_result.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cse/settings.py" afterPath="$PROJECT_DIR$/cse/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cse/pipelines/test.py" afterPath="$PROJECT_DIR$/cse/pipelines/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CSE-Spider.iws" />
@@ -37,26 +36,7 @@
     <favorites_list name="CSE-Spider" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="test.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cse/pipelines/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="41" selection-start="926" selection-end="926" vertical-scroll-proportion="0.4176334" vertical-offset="216" max-vertical-offset="1332">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cse/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="23" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="1818">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -86,18 +66,20 @@
         <option value="C:/Python27/Lib/site-packages/Scrapy-0.25.1-py2.7.egg/scrapy/__init__.py" />
         <option value="$PROJECT_DIR$/cse/contrib/FilterResponses.py" />
         <option value="$PROJECT_DIR$/logs/scrapy.log" />
-        <option value="$PROJECT_DIR$/cse/items.py" />
         <option value="$PROJECT_DIR$/cse/middlewares/FilterResponses.py" />
         <option value="$PROJECT_DIR$/cse/scrapy_redis/scheduler.py" />
         <option value="$PROJECT_DIR$/README.MD" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/cse/scrapy_redis/queue.py" />
-        <option value="$PROJECT_DIR$/cse/utils/select_result.py" />
-        <option value="$PROJECT_DIR$/cse/spiders/cse_spider.py" />
         <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/cse/settings.py" />
         <option value="$PROJECT_DIR$/cse/pipelines/test.py" />
+        <option value="$PROJECT_DIR$/cse/items.py" />
+        <option value="$PROJECT_DIR$/cse/spiders/cse_spider.py" />
+        <option value="$PROJECT_DIR$/cse/pipelines/notify.py" />
+        <option value="$PROJECT_DIR$/cse/pipelines/save_html.py" />
+        <option value="$PROJECT_DIR$/cse/settings.py" />
+        <option value="$PROJECT_DIR$/cse/utils/select_result.py" />
       </list>
     </option>
   </component>
@@ -439,6 +421,9 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -460,9 +445,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -566,7 +548,11 @@
       <created>1428219714545</created>
       <updated>1428219714545</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="improve performance">
+      <created>1428238727331</created>
+      <updated>1428238727331</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -591,7 +577,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -599,7 +585,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847533" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22249389" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22493887" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -610,8 +596,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -627,12 +613,12 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="remove log" />
-    <MESSAGE value="improve performance" />
     <MESSAGE value="improvement" />
     <MESSAGE value="fix requirements.txt" />
     <MESSAGE value="no test" />
     <MESSAGE value="test ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="test ok" />
+    <MESSAGE value="improve performance" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve performance" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -640,31 +626,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Python27/Lib/site-packages/Scrapy-0.25.1-py2.7.egg/scrapy/contrib/downloadermiddleware/ajaxcrawl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.85846865" vertical-offset="740" max-vertical-offset="1602" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/Scrapy-0.25.1-py2.7.egg/scrapy/contrib/downloadermiddleware/chunked.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="862" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/Scrapy-0.25.1-py2.7.egg/scrapy/contrib/downloadermiddleware/httpproxy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1026" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/Scrapy-0.25.1-py2.7.egg/scrapy/contrib/downloadermiddleware/defaultheaders.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="862" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/Scrapy-0.25.1-py2.7.egg/scrapy/contrib/downloadermiddleware/redirect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="33" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1890" />
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/Scrapy-0.25.1-py2.7.egg/scrapy/contrib/downloadermiddleware/robotstxt.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1044" />
@@ -735,11 +696,6 @@
         <state line="14" column="29" selection-start="467" selection-end="467" vertical-scroll-proportion="0.18793504" vertical-offset="0" max-vertical-offset="1314" />
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/Scrapy-0.25.1-py2.7.egg/scrapy/http/request/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="28" selection-start="580" selection-end="591" vertical-scroll-proportion="0.28125" vertical-offset="0" max-vertical-offset="1836" />
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/Scrapy-0.25.1-py2.7.egg/scrapy/linkextractor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="18" selection-start="417" selection-end="435" vertical-scroll-proportion="0.041763343" vertical-offset="108" max-vertical-offset="1710" />
@@ -768,11 +724,6 @@
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/redis/client.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="821" column="8" selection-start="29956" selection-end="29956" vertical-scroll-proportion="0.33294663" vertical-offset="14095" max-vertical-offset="47430" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-762174762/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1742" column="8" selection-start="58700" selection-end="58700" vertical-scroll-proportion="0.33294663" vertical-offset="31069" max-vertical-offset="92718" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/w3lib/html.py">
@@ -811,11 +762,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="66" selection-start="570" selection-end="570" vertical-scroll-proportion="0.5494506" vertical-offset="0" max-vertical-offset="819" />
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://C:/Python27/Lib/site-packages/django/conf/__init__.py">
@@ -853,11 +804,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="861" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cse/utils/select_result.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="88" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.70731705" vertical-offset="597" max-vertical-offset="1458" />
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/Scrapy-0.25.1-py2.7.egg/scrapy/exceptions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="6" selection-start="300" selection-end="300" vertical-scroll-proportion="0.31358886" vertical-offset="0" max-vertical-offset="1116" />
@@ -872,46 +818,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cse/items.py">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="23" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="61" max-vertical-offset="630">
+        <state line="10" column="24" selection-start="133" selection-end="133" vertical-scroll-proportion="0.2088167" vertical-offset="0" max-vertical-offset="862" />
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/encodings/utf_8_sig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="13" selection-start="2521" selection-end="2521" vertical-scroll-proportion="0.21925753" vertical-offset="1251" max-vertical-offset="2214">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
+    <entry file="file://C:/Python27/Lib/site-packages/Scrapy-0.25.1-py2.7.egg/scrapy/http/request/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="133" selection-end="133" vertical-scroll-proportion="0.2088167" vertical-offset="0" max-vertical-offset="862">
+        <state line="17" column="8" selection-start="417" selection-end="417" vertical-scroll-proportion="-0.2088167" vertical-offset="378" max-vertical-offset="1836">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/Scrapy-0.25.1-py2.7.egg/scrapy/spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="26" selection-start="553" selection-end="553" vertical-scroll-proportion="0.29681978" vertical-offset="0" max-vertical-offset="1818">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/Scrapy-0.25.1-py2.7.egg/scrapy/log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="4" selection-start="3990" selection-end="3990" vertical-scroll-proportion="0.52088165" vertical-offset="1765" max-vertical-offset="2862">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="13" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cse/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="6" selection-start="83" selection-end="83" vertical-scroll-proportion="0.12529002" vertical-offset="0" max-vertical-offset="862">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cse/spiders/cse_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="1753" selection-end="1753" vertical-scroll-proportion="1.2529002" vertical-offset="0" max-vertical-offset="1422">
-          <folding>
-            <element signature="e#38#52#0" expanded="true" />
-          </folding>
+        <state line="47" column="26" selection-start="1459" selection-end="1473" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1026">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy.cfg">
+    <entry file="file://$PROJECT_DIR$/cse/pipelines/save_html.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="13" selection-start="24" selection-end="24" vertical-scroll-proportion="0.020881671" vertical-offset="0" max-vertical-offset="862">
+        <state line="11" column="19" selection-start="245" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cse/pipelines/notify.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="21" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0" vertical-offset="182" max-vertical-offset="1062">
+          <folding>
+            <element signature="e#39#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cse/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="23" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="1818">
+        <state line="69" column="17" selection-start="1877" selection-end="1877" vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="1836">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cse/pipelines/test.py">
+    <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-762174762/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="41" selection-start="926" selection-end="926" vertical-scroll-proportion="0.4176334" vertical-offset="216" max-vertical-offset="1332">
+        <state line="1742" column="8" selection-start="58700" selection-end="58700" vertical-scroll-proportion="0.33294663" vertical-offset="31069" max-vertical-offset="92718">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cse/utils/select_result.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="36" selection-start="360" selection-end="360" vertical-scroll-proportion="-0.12529002" vertical-offset="378" max-vertical-offset="1422">
           <folding />
         </state>
       </provider>

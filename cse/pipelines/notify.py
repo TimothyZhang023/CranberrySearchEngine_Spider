@@ -2,7 +2,6 @@
 #-*-coding:utf-8-*-
 
 from scrapy import log
-import scrapy
 import time
 from cse.scrapy_redis.queue import IndexNotifyQueue
 
@@ -12,52 +11,35 @@ REDIS_HOST_Notify = 'localhost'
 REDIS_PORT_Notify = 6379
 
 
-class TestPipeline(object):
-    """
-        This only for print the final item for the purpose of debug,because the default
-        scrapy output the result,so if you use this pipeline,you better change the scrapy
-        source code:
-        
-        sudo vim /usr/local/lib/python2.7/dist-packages/Scrapy-0.16.4-py2.7.egg/scrapy/core/scrapy.py
-        make line 211 like this:
-            #log.msg(level=log.DEBUG, spider=spider, **logkws)
-    """
-
-    def __init__(self, server, port, key):
+class IndexNotifyPipeline(object):
+    def __init__(self, server, port, key, settings):
         self.server = server
         self.port = port
         self.key = key
+        self.settings = settings
 
         pass
-
 
     @classmethod
     def from_settings(cls, settings):
         server = settings.get('REDIS_HOST_Notify', REDIS_HOST)
         port = settings.get('REDIS_PORT_Notify', REDIS_PORT)
         key = settings.get('IndexNotifyQueue', 'IndexNotifyQueue')
-        return cls(server, port, key)
+        return cls(server, port, key, settings)
 
     @classmethod
     def from_crawler(cls, crawler):
         settings = crawler.settings
         return cls.from_settings(settings)
 
-
     def process_item(self, item, spider):
-        #print self.style.NOTICE("SUCCESS(item):" + item['original_url'])
-
-        #print "Test Pipeline process item:", item
-
-        filename = 'html/' + item['redis_id'] + '.html'
-        open(filename, 'wb').write(item['content'])
-
         index_notify = {
-            'hash_key': item['redis_id'],
+            'hash_key': item['url_id'],
             'url': item['url'],
             'title': item['title'],
             'page_encoding': item['encoding'],
             'storage_type': 'local_fs',
+            'storage_position': self.settings.get('HTML_DIR', REDIS_HOST),
             'queue_time': time.strftime("%Y-%m-%d %H:%M:%S")
         }
 

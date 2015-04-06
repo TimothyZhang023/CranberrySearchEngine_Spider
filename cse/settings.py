@@ -31,9 +31,10 @@ AUTOTHROTTLE_CONCURRENCY_CHECK_PERIOD = 10  #How many responses should pass to p
 
 #XXX:scrapy's item pipelines have orders!!!!!,it will go through all the pipelines by the order of the list;
 #So if you change the item and return it,the new item will transfer to the next pipeline.
-ITEM_PIPELINES = [
-    'cse.pipelines.test.TestPipeline',
-]
+ITEM_PIPELINES = {
+    'cse.pipelines.save_html.SaveHtmlPipeline': 900,
+    'cse.pipelines.notify.IndexNotifyPipeline': 901,
+}
 
 COOKIES_ENABLED = False
 
@@ -66,7 +67,7 @@ ALLOWED_DOMAIN = [
 ]
 
 LOG_FILE = "scrapy.log"
-LOG_LEVEL = "ERROR"
+LOG_LEVEL = "INFO"
 LOG_STDOUT = False
 
 #STATS_CLASS = ''
