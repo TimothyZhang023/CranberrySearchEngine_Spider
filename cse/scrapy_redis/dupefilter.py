@@ -6,7 +6,8 @@ import time
 
 from scrapy.dupefilter import BaseDupeFilter
 from scrapy.utils.request import request_fingerprint
-
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
 
 class RFPDupeFilter(BaseDupeFilter):
     """Redis-based request duplication filter"""
@@ -25,8 +26,8 @@ class RFPDupeFilter(BaseDupeFilter):
 
     @classmethod
     def from_settings(cls, settings):
-        host = settings.get('REDIS_HOST', 'localhost')
-        port = settings.get('REDIS_PORT', 6379)
+        host = settings.get('REDIS_HOST', REDIS_HOST)
+        port = settings.get('REDIS_PORT', REDIS_PORT)
         server = redis.Redis(host, port)
         # create one-time key. needed to support to use this
         # class as standalone dupefilter with scrapy's default scheduler

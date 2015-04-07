@@ -72,6 +72,9 @@ LOG_STDOUT = False
 
 #STATS_CLASS = ''
 
+'''
+Notice , SpiderPriorityQueue is not supported by Redis Cluster use SpiderQueue or SpiderStack Instead~
+'''
 #DUPEFILTER_CLASS = 'scrapy.dupefilter.RFPDupeFilter'
 #SCHEDULER = 'scrapy.core.scheduler.Scheduler'
 SCHEDULER = "cse.scrapy_redis.scheduler.Scheduler"

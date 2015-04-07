@@ -18,7 +18,7 @@ class CseSpider(BaseSpider):
     allowed_domains = ["njtech.edu.cn", "green.njut.asia"]
 
     start_urls = (
-        'http://green.njut.asia/njut.html',
+        'http://green.njtech.edu.cn/njut.html',
     )
 
     # rules = (

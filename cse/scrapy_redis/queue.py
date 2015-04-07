@@ -174,6 +174,7 @@ class IndexNotifyQueue(object):
     def push(self, index_notify):
         """Push a request"""
         self.server.lpush(self.key, self._encode_index_notify(index_notify))
+        self.server.incr("totolPages")
 
     def pop(self):
         """Pop a request"""
