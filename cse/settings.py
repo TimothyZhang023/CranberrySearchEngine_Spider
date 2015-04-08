@@ -68,7 +68,7 @@ HTML_FILE_CONTENT_TYPE = [
 
 LOG_FILE = "scrapy.log"
 LOG_LEVEL = "INFO"
-LOG_STDOUT = False
+LOG_STDOUT = True
 
 #STATS_CLASS = ''
 

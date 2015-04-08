@@ -16,7 +16,7 @@ class CseSpider(BaseSpider):
     #  allowed_hosts = ["njtech.edu.cn","127.0.0.1"]
 
     allowed_domains = ["njtech.edu.cn", "green.njut.asia"]
-    disallowed_domains = ["bbs,njtech.edu.cn", "online.njtech.edu.cn", "moodle.njtech.edu.cn"]
+    disallowed_domains = ["bbs.njtech.edu.cn", "online.njtech.edu.cn", "moodle.njtech.edu.cn"]
 
     start_urls = (
         'http://green.njtech.edu.cn/njut.html',
@@ -30,7 +30,6 @@ class CseSpider(BaseSpider):
     #               follow=True, ), )
 
     def parse(self, response):
-        #print ("now processing:" + response.url + " encode:" + response.encoding )
 
         response_selector = HtmlXPathSelector(text=response.body)
 

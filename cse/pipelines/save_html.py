@@ -6,6 +6,8 @@ from scrapy import log
 
 class SaveHtmlPipeline(object):
     def process_item(self, item, spider):
+        print ("save:" + item['url'] + " encode:" + item['encoding']  )
+
         filename = 'html/' + item['url_id'] + '.html'
         open(filename, 'wb').write(item['content'])
 

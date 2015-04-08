@@ -42,6 +42,7 @@ class NjtechOffsiteMiddleware(object):
 
         allowed_res = bool(allowed_regex.search(host))
         disallowed_res = not bool(disallowed_regex.search(host))
+        # log.msg('{0}:{1} allow?{2} disallow?{3}'.format(request.url, host, allowed_res, disallowed_res))
         return allowed_res and disallowed_res
 
     def get_allowed_host_regex(self, spider):
