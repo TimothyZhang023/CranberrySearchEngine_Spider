@@ -65,9 +65,15 @@ def clean_link(link_text):
 
 clean_url = lambda base_url, u, response_encoding: urljoin(base_url,
                                                            replace_entities(
-                                                               text=clean_link(u.decode(response_encoding, 'ignore')),
+                                                               text=clean_link(u),
                                                                encoding=response_encoding)
 )
+#
+# clean_url = lambda base_url, u, response_encoding: urljoin(base_url,
+#                                                            replace_entities(
+#                                                                text=clean_link(u.decode(response_encoding, 'ignore')),
+#                                                                encoding=response_encoding)
+# )
 
 """
     remove leading and trailing whitespace and punctuation and entities from the given text.

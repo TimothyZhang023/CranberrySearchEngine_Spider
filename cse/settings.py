@@ -47,6 +47,11 @@ DOWNLOADER_MIDDLEWARES = {
     'cse.contrib.downloadmiddleware.filter_responses.FilterResponses': 999,
 }
 
+SPIDER_MIDDLEWARES_BASE={
+     'scrapy.contrib.spidermiddleware.offsite.OffsiteMiddleware': None,
+     'cse.contrib.spidermiddleware.njtech_offsite.NjtechOffsiteMiddleware':500
+}
+
 
 #To make RotateUserAgentMiddleware enable.
 USER_AGENT = ''
@@ -60,11 +65,6 @@ HTML_FILE_CONTENT_TYPE = [
     'text/plain',
 ]
 
-ALLOWED_DOMAIN = [
-    'njtech.edu.cn',
-    'njut.asia',
-    '127.0.0.1',
-]
 
 LOG_FILE = "scrapy.log"
 LOG_LEVEL = "INFO"
@@ -81,6 +81,7 @@ SCHEDULER = "cse.scrapy_redis.scheduler.Scheduler"
 SCHEDULER_PERSIST = False
 SCHEDULER_QUEUE_CLASS = 'cse.scrapy_redis.queue.SpiderPriorityQueue'
 # JOBDIR='jobs'
+
 
 
 #AJAXCRAWL_ENABLED = True
