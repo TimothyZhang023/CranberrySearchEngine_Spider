@@ -28,7 +28,7 @@ class NjtechOffsiteMiddleware(object):
                     if domain and domain not in self.domains_seen:
                         self.domains_seen.add(domain)
                         log.msg(format="Filtered offsite request to %(domain)r: %(request)s",
-                                level=log.INFO, spider=spider, domain=domain, request=x)
+                                level=log.DEBUG, spider=spider, domain=domain, request=x)
                         self.stats.inc_value('offsite/domains', spider=spider)
                     self.stats.inc_value('offsite/filtered', spider=spider)
             else:
