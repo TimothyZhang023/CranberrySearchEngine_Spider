@@ -7,8 +7,8 @@ from cse.scrapy_redis.queue import IndexNotifyQueue
 
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
-REDIS_HOST_Notify = 'localhost'
-REDIS_PORT_Notify = 6379
+REDIS_HOST_NOTIFY = 'localhost'
+REDIS_PORT_NOTIFY = 6379
 
 
 class IndexNotifyPipeline(object):
@@ -22,9 +22,9 @@ class IndexNotifyPipeline(object):
 
     @classmethod
     def from_settings(cls, settings):
-        server = settings.get('REDIS_HOST_Notify', REDIS_HOST)
-        port = settings.get('REDIS_PORT_Notify', REDIS_PORT)
-        key = settings.get('IndexNotifyQueue', 'IndexNotifyQueue')
+        server = settings.get('REDIS_HOST_NOTIFY', REDIS_HOST)
+        port = settings.get('REDIS_PORT_NOTIFY', REDIS_PORT)
+        key = settings.get('INDEX_NOTIFY_KEY', 'IndexNotifyQueue')
         return cls(server, port, key, settings)
 
     @classmethod
@@ -42,7 +42,6 @@ class IndexNotifyPipeline(object):
             'storage_position': self.settings.get('HTML_DIR', REDIS_HOST),
             'queue_time': time.strftime("%Y-%m-%d %H:%M:%S")
         }
-
         index_notify_queue = IndexNotifyQueue(self.server, self.port, self.key)
         index_notify_queue.push(index_notify)
 

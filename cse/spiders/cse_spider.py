@@ -1,5 +1,6 @@
 #!/usr/bin/python
 #-*-coding:utf-8-*-
+import base64
 import hashlib
 
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
@@ -49,8 +50,8 @@ class CseSpider(BaseSpider):
         cse_item['url_id'] = hashlib.sha256(response.url).hexdigest()
         cse_item['url'] = response.url
         cse_item['content_type'] = response.headers.get('Content-Type', '')
-        cse_item['title'] = title
-        cse_item['content'] = response.body
+        cse_item['title'] = title.decode(response.encoding, 'ignore').encode('utf-8')
+        cse_item['content'] = response.body.decode(response.encoding, 'ignore').encode('utf-8')
         cse_item['encoding'] = response.encoding
         yield cse_item
 

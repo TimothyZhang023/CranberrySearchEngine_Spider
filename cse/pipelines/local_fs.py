@@ -5,6 +5,19 @@ from scrapy import log
 
 
 class SaveHtmlPipeline(object):
+    def __init__(self, settings):
+        self.settings = settings
+        pass
+
+    @classmethod
+    def from_settings(cls, settings):
+        return cls(settings)
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        settings = crawler.settings
+        return cls.from_settings(settings)
+
     def process_item(self, item, spider):
         print ("save:" + item['url'] + " encode:" + item['encoding']  )
 

@@ -9,8 +9,8 @@ from scrapy.utils.reqser import request_to_dict, request_from_dict
 # default values
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
-REDIS_HOST_Notify = 'localhost'
-REDIS_PORT_Notify = 6379
+REDIS_HOST_NOTIFY = 'localhost'
+REDIS_PORT_NOTIFY = 6379
 
 try:
     import cPickle as pickle
@@ -55,7 +55,8 @@ class Base(object):
 
     def clear(self):
         """Clear queue/stack"""
-        self.server.delete(self.key)
+        #self.server.delete(self.key)
+        pass
 
 
 class SpiderQueue(Base):
@@ -149,9 +150,9 @@ class IndexNotifyQueue(object):
 
     @classmethod
     def from_settings(cls, settings):
-        server = settings.get('REDIS_HOST_Notify', REDIS_HOST_Notify)
-        port = settings.get('REDIS_PORT_Notify', REDIS_PORT_Notify)
-        key = settings.get('IndexNotifyQueue', 'IndexNotifyQueue')
+        server = settings.get('REDIS_HOST_NOTIFY', REDIS_HOST_NOTIFY)
+        port = settings.get('REDIS_PORT_NOTIFY', REDIS_PORT_NOTIFY)
+        key = settings.get('INDEX_NOTIFY_KEY', 'IndexNotifyQueue')
         return cls(server, port, key)
 
     @classmethod

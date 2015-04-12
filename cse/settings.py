@@ -9,13 +9,13 @@ BOT_NAME = 'cse'
 SPIDER_MODULES = ['cse.spiders']
 NEWSPIDER_MODULE = 'cse.spiders'
 
-DOWNLOAD_TIMEOUT = 20
+DOWNLOAD_TIMEOUT = 10
 DOWNLOAD_DELAY = 0
-CONCURRENT_ITEMS = 50
-CONCURRENT_REQUESTS = 100
+CONCURRENT_ITEMS = 100
+CONCURRENT_REQUESTS = 200
 
 #The maximum number of concurrent (ie. simultaneous) requests that will be performed to any single domain.
-CONCURRENT_REQUESTS_PER_DOMAIN = 1000
+CONCURRENT_REQUESTS_PER_DOMAIN = 20
 CONCURRENT_REQUESTS_PER_IP = 0
 DEPTH_LIMIT = 0
 DEPTH_PRIORITY = 0
@@ -32,8 +32,10 @@ AUTOTHROTTLE_CONCURRENCY_CHECK_PERIOD = 10  #How many responses should pass to p
 #XXX:scrapy's item pipelines have orders!!!!!,it will go through all the pipelines by the order of the list;
 #So if you change the item and return it,the new item will transfer to the next pipeline.
 ITEM_PIPELINES = {
-    'cse.pipelines.save_html.SaveHtmlPipeline': 900,
-    'cse.pipelines.notify.IndexNotifyPipeline': 901,
+    'cse.pipelines.local_fs.SaveHtmlPipeline': 900,
+    'cse.pipelines.mongodb.SingleMongodbPipeline': 901,
+    'cse.pipelines.redis.IndexNotifyPipeline': 902,
+
 }
 
 COOKIES_ENABLED = False
@@ -67,34 +69,34 @@ HTML_FILE_CONTENT_TYPE = [
 
 
 LOG_FILE = "scrapy.log"
-LOG_LEVEL = "INFO"
+LOG_LEVEL = "ERROR"
 LOG_STDOUT = True
 
-#STATS_CLASS = ''
-
-'''
-Notice , SpiderPriorityQueue is not supported by Redis Cluster use SpiderQueue or SpiderStack Instead~
-'''
-#DUPEFILTER_CLASS = 'scrapy.dupefilter.RFPDupeFilter'
-#SCHEDULER = 'scrapy.core.scheduler.Scheduler'
 SCHEDULER = "cse.scrapy_redis.scheduler.Scheduler"
 SCHEDULER_PERSIST = False
-SCHEDULER_QUEUE_CLASS = 'cse.scrapy_redis.queue.SpiderPriorityQueue'
-# JOBDIR='jobs'
-
-
-
-#AJAXCRAWL_ENABLED = True
+SCHEDULER_QUEUE_CLASS = 'cse.scrapy_redis.queue.SpiderQueue'
 
 REDIS_HOST = "127.0.0.1"
 REDIS_PORT = 6379
 
-REDIS_HOST_Notify = "127.0.0.1"
-REDIS_PORT_Notify = 6379
+REDIS_HOST_NOTIFY = "127.0.0.1"
+REDIS_PORT_NOTIFY = 6379
 
+SingleMONGODB_SERVER = "127.0.0.1"
+SingleMONGODB_PORT = 27017
+SingleMONGODB_DB = "html"
 
-#Index Notify Queue Key
-IndexNotifyQueue = "IndexNotifyQueue"
+INDEX_NOTIFY_KEY = "IndexNotifyQueue"
 
 PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 HTML_DIR = os.path.join(PROJECT_DIR, '../html')
+
+
+# JOBDIR='jobs'
+
+#AJAXCRAWL_ENABLED = True
+
+#STATS_CLASS = ''
+
+#DUPEFILTER_CLASS = 'scrapy.dupefilter.RFPDupeFilter'
+#SCHEDULER = 'scrapy.core.scheduler.Scheduler'
