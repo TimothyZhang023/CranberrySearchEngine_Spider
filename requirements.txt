@@ -2,5 +2,4 @@ scrapy>=0.24.5
 redis>=2.10.3
 tld>=0.7.2
 w3lib>=1.11.0
-pymongo
-txmongo
+pymongo==2.8

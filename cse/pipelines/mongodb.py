@@ -51,9 +51,8 @@ class SingleMongodbPipeline(object):
             'update_time': time.strftime("%Y-%m-%d %H:%M:%S"),
         }
 
-        result = self.db['html_detail'].insert(html_detail)
+        result = self.db['html_detail'].save(html_detail)
 
-        log.msg("Item %s wrote to MongoDB database %s/html_detail" %
-                (result, self.MONGODB_DB),
-                level=log.DEBUG, spider=spider)
+        print ("save in mongodb:" + item['url'])
+
         return item

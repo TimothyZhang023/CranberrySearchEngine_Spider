@@ -19,7 +19,7 @@ class SaveHtmlPipeline(object):
         return cls.from_settings(settings)
 
     def process_item(self, item, spider):
-        print ("save:" + item['url'] + " encode:" + item['encoding']  )
+        print ("save:" + item['url'] + " encode:" + item['encoding'])
 
         filename = 'html/' + item['url_id'] + '.html'
         open(filename, 'wb').write(item['content'])

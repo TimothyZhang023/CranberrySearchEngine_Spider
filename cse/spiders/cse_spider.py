@@ -16,12 +16,17 @@ class CseSpider(BaseSpider):
 
     #  allowed_hosts = ["njtech.edu.cn","127.0.0.1"]
 
-    allowed_domains = ["njtech.edu.cn", "green.njut.asia"]
-    disallowed_domains = ["bbs.njtech.edu.cn", "online.njtech.edu.cn", "moodle.njtech.edu.cn"]
+    allowed_domains = ["cqt.njtech.edu.cn", "green.njut.asia"]
+
+    # allowed_domains = ["njtech.edu.cn", "green.njut.asia"]
+    # disallowed_domains = ["bbs.njtech.edu.cn", "online.njtech.edu.cn", "moodle.njtech.edu.cn"]
 
     start_urls = (
-        'http://green.njtech.edu.cn/njut.html',
+        'http://cqt.njtech.edu.cn/',
     )
+    # start_urls = (
+    #     'http://green.njtech.edu.cn/njut.html',
+    # )
 
     # rules = (
     #     Rule(LinkExtractor(allow=r".*njtech.edu.cn.*"), ),
@@ -35,12 +40,9 @@ class CseSpider(BaseSpider):
         response_selector = HtmlXPathSelector(text=response.body)
 
         all_url_list = response_selector.xpath('//a/@href').extract()
-        title = response_selector.xpath('//title/text()').extract()
 
-        if len(title):
-            title = title[0].strip()
-        else:
-            title = ''
+        encoding = response.encoding
+
 
         for next_link in all_url_list:
             next_link = clean_url(response.url, next_link, response.encoding)
@@ -50,9 +52,10 @@ class CseSpider(BaseSpider):
         cse_item['url_id'] = hashlib.sha256(response.url).hexdigest()
         cse_item['url'] = response.url
         cse_item['content_type'] = response.headers.get('Content-Type', '')
-        cse_item['title'] = title.decode(response.encoding, 'ignore').encode('utf-8')
-        cse_item['content'] = response.body.decode(response.encoding, 'ignore').encode('utf-8')
-        cse_item['encoding'] = response.encoding
+        cse_item['title'] = ""
+        cse_item['content'] = response.body.decode(encoding, 'ignore').encode('utf-8')
+        cse_item['encoding'] = encoding
+
         yield cse_item
 
 

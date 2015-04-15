@@ -32,7 +32,7 @@ AUTOTHROTTLE_CONCURRENCY_CHECK_PERIOD = 10  #How many responses should pass to p
 #XXX:scrapy's item pipelines have orders!!!!!,it will go through all the pipelines by the order of the list;
 #So if you change the item and return it,the new item will transfer to the next pipeline.
 ITEM_PIPELINES = {
-    'cse.pipelines.local_fs.SaveHtmlPipeline': 900,
+#    'cse.pipelines.local_fs.SaveHtmlPipeline': 900,
     'cse.pipelines.mongodb.SingleMongodbPipeline': 901,
     'cse.pipelines.redis.IndexNotifyPipeline': 902,
 
