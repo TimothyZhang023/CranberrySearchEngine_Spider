@@ -9,7 +9,7 @@ BOT_NAME = 'cse'
 SPIDER_MODULES = ['cse.spiders']
 NEWSPIDER_MODULE = 'cse.spiders'
 
-DOWNLOAD_TIMEOUT = 10
+DOWNLOAD_TIMEOUT = 20
 DOWNLOAD_DELAY = 0
 CONCURRENT_ITEMS = 100
 CONCURRENT_REQUESTS = 200
@@ -32,7 +32,7 @@ AUTOTHROTTLE_CONCURRENCY_CHECK_PERIOD = 10  #How many responses should pass to p
 #XXX:scrapy's item pipelines have orders!!!!!,it will go through all the pipelines by the order of the list;
 #So if you change the item and return it,the new item will transfer to the next pipeline.
 ITEM_PIPELINES = {
-#    'cse.pipelines.local_fs.SaveHtmlPipeline': 900,
+    'cse.pipelines.local_fs.SaveHtmlPipeline': 900,
     'cse.pipelines.mongodb.SingleMongodbPipeline': 901,
     'cse.pipelines.redis.IndexNotifyPipeline': 902,
 
@@ -70,7 +70,7 @@ HTML_FILE_CONTENT_TYPE = [
 
 LOG_FILE = "scrapy.log"
 LOG_LEVEL = "ERROR"
-LOG_STDOUT = True
+LOG_STDOUT = False
 
 SCHEDULER = "cse.scrapy_redis.scheduler.Scheduler"
 SCHEDULER_PERSIST = False
