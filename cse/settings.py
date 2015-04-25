@@ -9,10 +9,10 @@ BOT_NAME = 'cse'
 SPIDER_MODULES = ['cse.spiders']
 NEWSPIDER_MODULE = 'cse.spiders'
 
-DOWNLOAD_TIMEOUT = 10
+DOWNLOAD_TIMEOUT = 60
 DOWNLOAD_DELAY = 0
-CONCURRENT_ITEMS = 100
-CONCURRENT_REQUESTS = 200
+CONCURRENT_ITEMS = 200
+CONCURRENT_REQUESTS = 500
 
 #The maximum number of concurrent (ie. simultaneous) requests that will be performed to any single domain.
 CONCURRENT_REQUESTS_PER_DOMAIN = 20
@@ -32,7 +32,7 @@ AUTOTHROTTLE_CONCURRENCY_CHECK_PERIOD = 10  #How many responses should pass to p
 #XXX:scrapy's item pipelines have orders!!!!!,it will go through all the pipelines by the order of the list;
 #So if you change the item and return it,the new item will transfer to the next pipeline.
 ITEM_PIPELINES = {
-#    'cse.pipelines.local_fs.SaveHtmlPipeline': 900,
+   # 'cse.pipelines.local_fs.SaveHtmlPipeline': 900,
     'cse.pipelines.mongodb.SingleMongodbPipeline': 901,
     'cse.pipelines.redis.IndexNotifyPipeline': 902,
 
@@ -70,7 +70,7 @@ HTML_FILE_CONTENT_TYPE = [
 
 LOG_FILE = "scrapy.log"
 LOG_LEVEL = "ERROR"
-LOG_STDOUT = True
+LOG_STDOUT = False
 
 SCHEDULER = "cse.scrapy_redis.scheduler.Scheduler"
 SCHEDULER_PERSIST = False
@@ -85,6 +85,7 @@ REDIS_PORT_NOTIFY = 6379
 SingleMONGODB_SERVER = "127.0.0.1"
 SingleMONGODB_PORT = 27017
 SingleMONGODB_DB = "html"
+
 
 INDEX_NOTIFY_KEY = "IndexNotifyQueue"
 
