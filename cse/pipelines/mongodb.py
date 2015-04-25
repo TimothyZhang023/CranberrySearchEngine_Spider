@@ -2,7 +2,7 @@ import datetime
 import traceback
 
 __author__ = 'TianShuo'
-from pymongo.connection import MongoClient
+from pymongo import MongoClient
 from scrapy import log
 import time
 
@@ -14,7 +14,7 @@ class SingleMongodbPipeline(object):
 
     MONGODB_SERVER = "localhost"
     MONGODB_PORT = 27017
-    MONGODB_DB = "books_fs"
+    MONGODB_DB = "html"
 
     def __init__(self):
         """
@@ -44,13 +44,12 @@ class SingleMongodbPipeline(object):
         html_detail = {
             'docId': item.get('url_id'),
             'url': item.get('url', ''),
-            'title': item.get('title', ''),
             'content': item.get('content', ''),
-            'content_type': item.get('content_type', ''),
             'encoding': item.get('encoding', ''),
             'update_time': time.strftime("%Y-%m-%d %H:%M:%S"),
         }
 
+        result = self.db['html_detail'].delete_one({'docId': item.get('url_id')})
         result = self.db['html_detail'].save(html_detail)
 
         print ("save in mongodb:" + item['url'])

@@ -36,7 +36,6 @@ class IndexNotifyPipeline(object):
         index_notify = {
             'hash_key': item['url_id'],
             'url': item['url'],
-            'title': item['title'],
             'page_encoding': item['encoding'],
             'storage_type': 'local_fs',
             'storage_position': self.settings.get('HTML_DIR', REDIS_HOST),

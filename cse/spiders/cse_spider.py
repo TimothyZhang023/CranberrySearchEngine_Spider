@@ -9,6 +9,7 @@ from scrapy.selector import HtmlXPathSelector
 from scrapy.http import Request
 from cse.items import CseCrawlerItem
 from cse.utils.select_result import clean_url
+from cse.utils.compress_hash import compress_hash
 
 
 class CseSpider(BaseSpider):
@@ -36,23 +37,20 @@ class CseSpider(BaseSpider):
     #               follow=True, ), )
 
     def parse(self, response):
-
         response_selector = HtmlXPathSelector(text=response.body)
 
         all_url_list = response_selector.xpath('//a/@href').extract()
 
         encoding = response.encoding
 
-
         for next_link in all_url_list:
             next_link = clean_url(response.url, next_link, response.encoding)
             yield Request(url=next_link, callback=self.parse)
 
         cse_item = CseCrawlerItem()
-        cse_item['url_id'] = hashlib.sha256(response.url).hexdigest()
+        cse_item['url_id'] = compress_hash(hashlib.sha256(response.url.lower()).hexdigest())
         cse_item['url'] = response.url
         cse_item['content_type'] = response.headers.get('Content-Type', '')
-        cse_item['title'] = ""
         cse_item['content'] = response.body.decode(encoding, 'ignore').encode('utf-8')
         cse_item['encoding'] = encoding
 

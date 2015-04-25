@@ -29,7 +29,7 @@
 """
 
 import types
-from pymongo.connection import MongoClient
+from pymongo import MongoClient
 from pymongo import ASCENDING, DESCENDING
 
 DATABASE_NAME = "html"
@@ -42,7 +42,6 @@ INDEX = { \
         { \
             'docId': {'name': 'docId', 'unique': True},
             'url': {'name': 'url'},
-            'title': {'name': 'title'},
             'update_time': {'name': 'update_time'},
         } \
     }
@@ -62,7 +61,32 @@ def create_index():
             client[DATABASE_NAME][k].ensure_index(list(key) if type(key) == types.TupleType else key, **kwargs)
 
 
+def create_test_data():
+    html_detail = {
+        'docId': "123456",
+        'url': "http://www.zts1993.com",
+        'content': "http://www.zts1993.com",
+        'encoding': "http://www.zts1993.com",
+        'update_time': "http://www.zts1993.com",
+    }
+    result = client[DATABASE_NAME]['html_detail'].insert_one(html_detail)
+    print result
+
+    client[DATABASE_NAME]['html_detail'].delete_one({'docId': "123456"})
+
+    html_detail = {
+        'docId': "123456",
+        'url': "http://www.zts1993.com",
+        'content': "http://www.zts1993.com",
+        'encoding': "http://www.zts1993.com",
+        'update_time': "http://www.zts1993.com",
+    }
+    result = client[DATABASE_NAME]['html_detail'].insert_one(html_detail)
+    print result
+
+
 if __name__ == "__main__":
     client = MongoClient(DATABASE_HOST, DATABASE_PORT)
     drop_database(DATABASE_NAME)
-    create_index() 
+    create_index()
+    create_test_data()
