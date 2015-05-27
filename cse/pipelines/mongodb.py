@@ -32,9 +32,9 @@ class SingleMongodbPipeline(object):
 
     @classmethod
     def from_crawler(cls, crawler):
-        cls.MONGODB_SERVER = crawler.settings.get('SingleMONGODB_SERVER', 'localhost')
-        cls.MONGODB_PORT = crawler.settings.getint('SingleMONGODB_PORT', 27017)
-        cls.MONGODB_DB = crawler.settings.get('SingleMONGODB_DB', 'html')
+        cls.MONGODB_SERVER = crawler.settings.get('SINGLE_MONGODB_SERVER', 'localhost')
+        cls.MONGODB_PORT = crawler.settings.getint('SINGLE_MONGODB_PORT', 27017)
+        cls.MONGODB_DB = crawler.settings.get('SINGLE_MONGODB_DB', 'html')
         print cls.MONGODB_SERVER, cls.MONGODB_PORT, cls.MONGODB_DB
         pipe = cls()
         pipe.crawler = crawler

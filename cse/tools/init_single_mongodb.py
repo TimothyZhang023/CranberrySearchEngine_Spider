@@ -34,15 +34,13 @@ from pymongo import ASCENDING, DESCENDING
 
 DATABASE_NAME = "html"
 client = None
-DATABASE_HOST = "localhost"
+DATABASE_HOST = "192.168.0.126"
 DATABASE_PORT = 27017
 INDEX = { \
     #collection
     'html_detail': \
         { \
             'docId': {'name': 'docId', 'unique': True},
-            'url': {'name': 'url'},
-            'update_time': {'name': 'update_time'},
         } \
     }
 
@@ -87,6 +85,6 @@ def create_test_data():
 
 if __name__ == "__main__":
     client = MongoClient(DATABASE_HOST, DATABASE_PORT)
-    drop_database(DATABASE_NAME)
+    #drop_database(DATABASE_NAME)
     create_index()
-    create_test_data()
+    #create_test_data()

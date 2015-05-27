@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d543114-9a0a-43ca-ab62-f0725a7d41bd" name="Default" comment="Merge branch 'master' of https://github.com/zts1993/CranberrySearchEngine_Spider&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/CSE_Spider.iml" afterPath="$PROJECT_DIR$/.idea/CSE_Spider.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cse/utils/compress_hash.py" afterPath="$PROJECT_DIR$/cse/utils/compress_hash.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cse/spiders/cse_spider.py" afterPath="$PROJECT_DIR$/cse/spiders/cse_spider.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cse/tools/init_single_mongodb.py" afterPath="$PROJECT_DIR$/cse/tools/init_single_mongodb.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cse/pipelines/mongodb.py" afterPath="$PROJECT_DIR$/cse/pipelines/mongodb.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cse/settings.py" afterPath="$PROJECT_DIR$/cse/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -18,8 +20,8 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CSE_Spider$cse_spider.coverage" NAME="cse_spider Coverage Results" MODIFIED="1427716539165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cse/spiders" />
-    <SUITE FILE_PATH="coverage/CSE_Spider$compress_hash.coverage" NAME="compress_hash Coverage Results" MODIFIED="1429957694335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cse/utils" />
-    <SUITE FILE_PATH="coverage/CSE_Spider$init_single_mongodb.coverage" NAME="init_single_mongodb Coverage Results" MODIFIED="1429955769021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cse/tools" />
+    <SUITE FILE_PATH="coverage/CSE_Spider$compress_hash.coverage" NAME="compress_hash Coverage Results" MODIFIED="1431841250122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cse/utils" />
+    <SUITE FILE_PATH="coverage/CSE_Spider$init_single_mongodb.coverage" NAME="init_single_mongodb Coverage Results" MODIFIED="1431864486368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cse/tools" />
     <SUITE FILE_PATH="coverage/CSE_Spider$clear_stats.coverage" NAME="clear_stats Coverage Results" MODIFIED="1427717037487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cse/commands" />
     <SUITE FILE_PATH="coverage/CSE_Spider$mongodb.coverage" NAME="mongodb Coverage Results" MODIFIED="1428806067964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cse/pipelines" />
     <SUITE FILE_PATH="coverage/CSE-Spider$graphite.coverage" NAME="graphite Coverage Results" MODIFIED="1427595299393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/woaidu_crawler/statscol" />
@@ -35,7 +37,26 @@
     <favorites_list name="CSE-Spider" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="filter_responses.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cse/contrib/downloadmiddleware/filter_responses.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="15" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="queue.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cse/scrapy_redis/queue.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="154" column="48" selection-start="4118" selection-end="4118" vertical-scroll-proportion="2.6287704" vertical-offset="452" max-vertical-offset="3420">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -82,11 +103,11 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/cse/items.py" />
         <option value="$PROJECT_DIR$/cse/pipelines/mongodb.py" />
-        <option value="$PROJECT_DIR$/cse/utils/compress_hash.py" />
-        <option value="$PROJECT_DIR$/cse/spiders/cse_spider.py" />
-        <option value="$PROJECT_DIR$/cse/tools/init_single_mongodb.py" />
         <option value="$PROJECT_DIR$/cse/pipelines/redis.py" />
         <option value="$PROJECT_DIR$/cse/settings.py" />
+        <option value="$PROJECT_DIR$/cse/spiders/cse_spider.py" />
+        <option value="$PROJECT_DIR$/cse/utils/compress_hash.py" />
+        <option value="$PROJECT_DIR$/cse/tools/init_single_mongodb.py" />
       </list>
     </option>
   </component>
@@ -150,6 +171,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -168,9 +190,174 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE_Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE-Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE_Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE-Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE_Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE-Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE_Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE-Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spiders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE_Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE-Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapy_redis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE_Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE-Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pipelines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE_Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE-Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contrib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE_Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE-Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contrib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spidermiddleware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE_Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSE-Spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contrib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="downloadmiddleware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -217,7 +404,7 @@
       <recent name="C:\Users\TianShuo\PycharmProjects\CSE-Spider\cse\middlewares" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.compress_hash">
+  <component name="RunManager" selected="Python.init_single_mongodb">
     <configuration default="false" name="graphite" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -397,9 +584,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -421,6 +605,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -605,24 +792,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20110025" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12897311" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19865526" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2544843" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25336322" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32735425" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -644,9 +831,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19376528" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884398" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -682,6 +869,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/cse/pipelines/redis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1026">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python27/site-packages/twisted/web/_newclient.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="985" column="13" selection-start="36404" selection-end="36404" vertical-scroll-proportion="-9.940835" vertical-offset="26011" max-vertical-offset="28764" />
@@ -718,11 +912,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="66" selection-start="570" selection-end="570" vertical-scroll-proportion="0.5494506" vertical-offset="0" max-vertical-offset="819" />
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://C:/Python27/Lib/site-packages/django/conf/__init__.py">
@@ -790,16 +984,6 @@
         <state line="6" column="0" selection-start="88" selection-end="88" vertical-scroll-proportion="0.12543555" vertical-offset="0" max-vertical-offset="861" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cse/contrib/downloadmiddleware/filter_responses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="67" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.6264501" vertical-offset="0" max-vertical-offset="862" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cse/contrib/downloadmiddleware/rotate_useragent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="38" selection-start="463" selection-end="463" vertical-scroll-proportion="-0.038869258" vertical-offset="285" max-vertical-offset="1134" />
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/Scrapy-0.25.1-py2.7.egg/scrapy/selector/lxmlsel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="0" selection-start="996" selection-end="996" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990" />
@@ -835,11 +1019,6 @@
         <state line="10" column="15" selection-start="349" selection-end="349" vertical-scroll-proportion="0.020881671" vertical-offset="162" max-vertical-offset="1188" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cse/scrapy_redis/queue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="48" selection-start="4118" selection-end="4118" vertical-scroll-proportion="1.3758701" vertical-offset="1532" max-vertical-offset="3420" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cse/scrapy_redis/dupefilter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1098" />
@@ -850,16 +1029,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5292" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cse/tools/clear_stats.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="24" selection-start="272" selection-end="272" vertical-scroll-proportion="0.25058004" vertical-offset="0" max-vertical-offset="862" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cse/contrib/spidermiddleware/njtech_offsite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1252" selection-end="2875" vertical-scroll-proportion="0.25290024" vertical-offset="430" max-vertical-offset="1314" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cse/contrib/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162" />
@@ -867,9 +1036,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="8" selection-start="62" selection-end="62" vertical-scroll-proportion="0.083526686" vertical-offset="0" max-vertical-offset="862">
-          <folding />
-        </state>
+        <state line="4" column="8" selection-start="62" selection-end="62" vertical-scroll-proportion="0.083526686" vertical-offset="0" max-vertical-offset="862" />
       </provider>
     </entry>
     <entry file="file://C:/Python27/Lib/site-packages/pymongo/__init__.py">
@@ -879,90 +1046,103 @@
     </entry>
     <entry file="file://C:/Python27/Lib/site-packages/pymongo/collection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="441" column="18" selection-start="17025" selection-end="17035" vertical-scroll-proportion="-6.5487256" vertical-offset="12306" max-vertical-offset="37044">
-          <folding>
-            <element signature="e#624#642#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="441" column="18" selection-start="17025" selection-end="17035" vertical-scroll-proportion="-6.5487256" vertical-offset="12306" max-vertical-offset="37044" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-762174762/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="273" column="4" selection-start="9050" selection-end="9050" vertical-scroll-proportion="0.2553802" vertical-offset="4736" max-vertical-offset="92718">
-          <folding />
-        </state>
+        <state line="273" column="4" selection-start="9050" selection-end="9050" vertical-scroll-proportion="0.2553802" vertical-offset="4736" max-vertical-offset="92718" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cse/utils/select_result.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="1" selection-start="2075" selection-end="2075" vertical-scroll-proportion="1.3902439" vertical-offset="237" max-vertical-offset="1530">
-          <folding />
-        </state>
+        <state line="69" column="1" selection-start="2075" selection-end="2075" vertical-scroll-proportion="1.3902439" vertical-offset="237" max-vertical-offset="1530" />
       </provider>
     </entry>
     <entry file="file://C:/Python27/Lib/hashlib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="37" selection-start="2801" selection-end="2807" vertical-scroll-proportion="0.0" vertical-offset="1100" max-vertical-offset="2736">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cse/utils/compress_hash.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="4" selection-start="1220" selection-end="1220" vertical-scroll-proportion="0.7726218" vertical-offset="0" max-vertical-offset="1674">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cse/tools/init_single_mongodb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="2341" selection-end="2341" vertical-scroll-proportion="0.7285383" vertical-offset="866" max-vertical-offset="1728">
-          <folding />
-        </state>
+        <state line="79" column="37" selection-start="2801" selection-end="2807" vertical-scroll-proportion="0.0" vertical-offset="1100" max-vertical-offset="2736" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cse/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="14" selection-start="130" selection-end="140" vertical-scroll-proportion="0.16705337" vertical-offset="0" max-vertical-offset="862">
+        <state line="8" column="14" selection-start="130" selection-end="140" vertical-scroll-proportion="0.16705337" vertical-offset="0" max-vertical-offset="862" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cse/spiders/cse_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="7" selection-start="909" selection-end="909" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1044" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cse/tools/clear_stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="24" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cse/utils/compress_hash.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="19" selection-start="2365" selection-end="2365" vertical-scroll-proportion="0.837587" vertical-offset="952" max-vertical-offset="1836" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cse/tools/init_single_mongodb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="11" selection-start="995" selection-end="995" vertical-scroll-proportion="0.2900232" vertical-offset="398" max-vertical-offset="1692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cse/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="14" selection-start="914" selection-end="928" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1944">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cse/pipelines/local_fs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="41" selection-start="603" selection-end="603" vertical-scroll-proportion="0.5011601" vertical-offset="0" max-vertical-offset="862">
+        <state line="6" column="22" selection-start="70" selection-end="86" vertical-scroll-proportion="0.12529002" vertical-offset="0" max-vertical-offset="862">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cse/pipelines/redis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="33" selection-start="1009" selection-end="1056" vertical-scroll-proportion="0.60324824" vertical-offset="164" max-vertical-offset="1026">
-          <folding>
-            <element signature="e#39#61#0" expanded="true" />
-          </folding>
+        <state line="44" column="45" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.7285383" vertical-offset="128" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cse/contrib/spidermiddleware/njtech_offsite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="44" selection-start="1514" selection-end="1514" vertical-scroll-proportion="0.3364269" vertical-offset="430" max-vertical-offset="1314">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cse/pipelines/mongodb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="9" selection-start="1720" selection-end="1720" vertical-scroll-proportion="0.7031802" vertical-offset="267" max-vertical-offset="1116">
+        <state line="16" column="4" selection-start="277" selection-end="277" vertical-scroll-proportion="0.3180212" vertical-offset="0" max-vertical-offset="1116">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cse/spiders/cse_spider.py">
+    <entry file="file://$PROJECT_DIR$/cse/contrib/downloadmiddleware/rotate_useragent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="24" selection-start="1583" selection-end="1589" vertical-scroll-proportion="0.66589326" vertical-offset="326" max-vertical-offset="1188">
-          <folding>
-            <element signature="e#38#51#0" expanded="true" />
-          </folding>
+        <state line="48" column="29" selection-start="2707" selection-end="2707" vertical-scroll-proportion="0.73085845" vertical-offset="216" max-vertical-offset="1116">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cse/settings.py">
+    <entry file="file://$PROJECT_DIR$/cse/contrib/downloadmiddleware/filter_responses.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="20" selection-start="230" selection-end="230" vertical-scroll-proportion="0.27146173" vertical-offset="0" max-vertical-offset="1944">
+        <state line="30" column="15" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cse/scrapy_redis/queue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="154" column="48" selection-start="4118" selection-end="4118" vertical-scroll-proportion="2.6287704" vertical-offset="452" max-vertical-offset="3420">
           <folding />
         </state>
       </provider>

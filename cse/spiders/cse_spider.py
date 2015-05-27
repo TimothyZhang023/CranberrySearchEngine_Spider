@@ -17,13 +17,14 @@ class CseSpider(BaseSpider):
 
     #  allowed_hosts = ["njtech.edu.cn","127.0.0.1"]
 
-    allowed_domains = ["cqt.njtech.edu.cn", "green.njut.asia"]
+    allowed_domains = ["cqt.njtech.edu.cn"]
 
     # allowed_domains = ["njtech.edu.cn", "green.njut.asia"]
     # disallowed_domains = ["bbs.njtech.edu.cn", "online.njtech.edu.cn", "moodle.njtech.edu.cn"]
 
     start_urls = (
         'http://cqt.njtech.edu.cn/',
+        'http://green.njtech.edu.cn/',
     )
     # start_urls = (
     #     'http://green.njtech.edu.cn/njut.html',
@@ -48,7 +49,7 @@ class CseSpider(BaseSpider):
             yield Request(url=next_link, callback=self.parse)
 
         cse_item = CseCrawlerItem()
-        cse_item['url_id'] = compress_hash(hashlib.sha256(response.url.lower()).hexdigest())
+        cse_item['url_id'] = compress_hash(hashlib.md5(response.url.lower()).hexdigest())
         cse_item['url'] = response.url
         cse_item['content_type'] = response.headers.get('Content-Type', '')
         cse_item['content'] = response.body.decode(encoding, 'ignore').encode('utf-8')
